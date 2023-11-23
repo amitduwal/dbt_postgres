@@ -1,0 +1,23 @@
+postgres_dbt:
+  outputs:
+    dev:
+      type: postgres
+      threads: 4
+      host: db
+      port: 5432
+      user: postgres
+      pass: password
+      dbname: my_app
+      schema: dev
+
+    prod:
+      type: postgres
+      threads: 4
+      host: db
+      port: 5432
+      user: postgres
+      pass: password
+      dbname: my_app
+      schema: public
+
+  target: dev

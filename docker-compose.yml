@@ -4,8 +4,8 @@ services:
     image: fishtownanalytics/dbt:1.0.0
     volumes:
       - ./DBT_project:/usr/app
-      - ./DBT_project/profiles.yml:/root/.dbt/profiles.yml
-    working_dir: /usr/app
+      - ./profiles.yml:/root/.dbt/profiles.yml
+    # working_dir: /usr/app
     # command: dbt run --profiles-dir /root/.dbt --project-dir /usr/app
     ports:
       - "8080:8080"
