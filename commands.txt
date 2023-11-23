@@ -1,1 +1,9 @@
 docker compose run dbt dbt --version
+docker compose run dbt dbt init --profiles-dir /usr/app
+In dbt (data build tool), the profile directory is where you store your profiles, which contain connection information for your 
+databases. A profile is a configuration file that helps dbt understand how to connect to your data warehouse or database and execute 
+queries.
+By default, dbt looks for a profiles directory in your dbt project directory, and within that directory, it expects to find a file 
+named profiles.yml. This file contains configurations for different profiles, each representing a connection to a specific database.
+
+Asked to enter project name
