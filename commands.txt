@@ -25,5 +25,10 @@ docker compose run dbt run
 list db
 docker-compose exec db psql -U postgres -c "\l"
 
+public schema
 docker-compose exec db psql -U postgres -c "\dt" my_app
 docker-compose exec db psql -U postgres -c "\dv" my_app
+
+dev schema
+docker-compose exec db psql -U postgres -c "\dt dev.*" my_app
+docker-compose exec db psql -U postgres -c "\dv dev.*" my_app

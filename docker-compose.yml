@@ -20,3 +20,14 @@ services:
       POSTGRES_DB: my_app
     ports:
       - "5432:5432"
+
+  pgadmin:
+    hostname: mypgadmin
+    container_name: pgadmin_container2
+    image: "dpage/pgadmin4:latest" # latest image as of 2021-11-08
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "pgadmin4@pgadmin.org"
+      PGADMIN_DEFAULT_PASSWORD: "admin"
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    ports:
+      - "5050:80"
